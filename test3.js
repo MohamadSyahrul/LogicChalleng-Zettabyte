@@ -25,24 +25,12 @@ function result(data) {
     // var filter = JSON.stringify(data)
     // return filter
 
-  //   for (const dt of data) {
-  //     for (const [key, value] of Object.entries(dt)) {
-  //            if (value === undefined || value === null) {
-  //                   delete dt.key
-  //            }
-  //            for (const dt of classes) {
-  //                    for (const [key2, value2] of Object.entries(dt)) {
-  //                               if (value2 === undefined || value2 === null) {
-  //                                   delete dt.key2
-  //                               }
-  //                    }
-  //           }
-  // }
-  // }
+
   let  yung = JSON.stringify(data);
   yung = yung.replace(/\s/g, "");
   yung = yung.replace(/"\w+":(null|undefined),/g,"");
-  return JSON.stringify(yung);
+  shrl =  JSON.parse(yung);
+  return JSON.stringify(shrl);
 
     
 }
